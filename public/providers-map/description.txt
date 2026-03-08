@@ -1,0 +1,31 @@
+Domicilia: Project Descriptions for Portfolio
+Below are two versions of a project description for Domicilia. These highlight both the technical complexity and the product-market fit.
+
+🚀 Version 1: Detailed Description
+Best for a dedicated project page or a deep-dive section in your portfolio.
+
+Project Overview
+Domicilia is a high-performance, location-based mobile application designed to connect users with local service providers (cleaning, maintenance, etc.) across Morocco. Built with a focus on speed, scalability, and local user behavior, it transforms the way users discover nearby help through an interactive, map-centric interface.
+
+Key Technical Features
+Map-Centric UX: Implemented a responsive map interface using react-native-maps with advanced marker clustering to handle high-density provider data without lag.
+Performance First: Achieved "butter-smooth" scroll and pan performance by leveraging React memoization, optimized FlatList rendering, and TanStack React Query for ultra-fast data fetching and intelligent caching.
+Clean Architecture: Designed a modular core/ architecture that separates business logic, API services, and strongly-typed interfaces from UI components, ensuring the app is ready for enterprise-scale features.
+Market-Specific Integration: Optimized the conversion funnel for the Moroccan market by integrating direct WhatsApp and Call CTAs, significantly lowering the barrier between discovery and contact.
+Developer Experience (DX): Maintained a 0-lint-error codebase with a robust CI/CD-ready setup, including Husky pre-commit hooks, Jest testing suites, and strict TypeScript enforcement.
+Tech Stack
+Frontend: React Native, Expo (SDK 54), TypeScript
+State & Data: TanStack React Query, Axios
+Styling: NativeWind (Tailwind CSS)
+Maps & UI: Google Maps API, React Native Map Clustering, Gorhom Bottom Sheet
+Tools: Jest, Firebase Analytics, Husky, ESLint/Prettier
+📋 Version 2: Brief Description
+Best for a "Featured Projects" card or a quick summary.
+
+Domicilia is a location-based service discovery platform built with React Native (Expo) and TypeScript. It features a high-performance interactive map with provider clustering, category filtering, and direct WhatsApp/Call integration tailored for the Moroccan market.
+
+Key highlights include a clean modular architecture, optimized state management via React Query, and a mobile-first UI styled with NativeWind. The project emphasizes performance with smooth gesture handling and efficient data caching.
+
+🔑 Quick Tags for SEO/Portfolio Filter
+#ReactNative #Expo #TypeScript #MobileDev #MapIntegration #ReactQuery #NativeWind
+

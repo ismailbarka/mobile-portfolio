@@ -1,0 +1,10 @@
+The Story Behind Domicilia
+Introduction
+In 2025, AuraPrestige Tech, led by the visionary Ismail Barka, launched Domicilia, a mobile app designed to transform how families find trusted cleaners and babysitters. Built with React Native for a seamless cross-platform experience and powered by NestJS with GraphQL for a robust backend, Domicilia delivers a user-friendly platform that prioritizes convenience and reliability. Taha Moumni, our talented full-stack developer, and Zakaria El-Bouzkri, our skilled backend specialist, crafted the app’s technical core, while Abdellah Kacem designed its intuitive interface using Figma. Domicilia reflects AuraPrestige Tech’s commitment to innovation, addressing real-world needs with cutting-edge technology.
+
+Domicilia stands out by simplifying the process of connecting families with verified professionals. The app’s intuitive design ensures users can quickly find and book services tailored to their needs, whether for childcare or home cleaning. By leveraging React Native, the team ensured a consistent experience across iOS and Android, while NestJS with GraphQL provides a scalable and efficient backend. Abdellah Kacem’s Figma designs bring clarity and ease to the user experience, making Domicilia not just functional but a pleasure to use. This collaborative effort has set a new standard for trust and efficiency in the industry.
+
+Conclusion
+Domicilia, brought to life in 2025 by AuraPrestige Tech under Ismail Barka’s leadership, redefines how families access essential services like cleaning and babysitting. With Taha Moumni’s full-stack expertise, Zakaria El-Bouzkri’s backend mastery, and Abdellah Kacem’s Figma-crafted designs, the app combines React Native’s smooth mobile performance with NestJS and GraphQL’s reliable backend. Domicilia is more than an app—it’s a testament to AuraPrestige Tech’s dedication to innovation, empowering communities with a trusted, efficient solution that paves the way for a more connected future.
+
+
