@@ -6,12 +6,12 @@ import { ContactFormModal } from "@/components/contact-form-modal";
 
 export function Hero() {
   return (
-    <section className="relative flex min-h-[100vh] flex-col items-center justify-center overflow-hidden px-4 text-center">
-      <div className="relative z-10 w-full max-w-5xl mx-auto flex flex-col items-center animate-in fade-in slide-in-from-bottom-8 duration-1000">
-        <div className="mb-8 inline-flex items-center rounded-full border border-white/5 bg-white/5 px-4 py-1.5 text-sm text-foreground/80 backdrop-blur-xl shadow-[0_0_30px_rgba(255,255,255,0.03)] hover:bg-white/10 transition-colors">
-          <span className="mr-2 flex h-2 w-2 relative">
+    <section className="relative flex min-h-[90vh] flex-col items-center justify-center overflow-hidden px-4 text-center">
+      <div className="relative z-10 w-full max-w-5xl mx-auto flex flex-col items-center">
+        <div className="mb-6 inline-flex items-center rounded-full bg-white/5 border border-white/5 px-3 py-1 text-xs text-foreground/70 backdrop-blur-md">
+          <span className="mr-2 flex h-1.5 w-1.5 relative">
             <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
-            <span className="relative inline-flex rounded-full h-2 w-2 bg-emerald-500"></span>
+            <span className="relative inline-flex rounded-full h-1.5 w-1.5 bg-emerald-500"></span>
           </span>
           Currently available for new opportunities
         </div>

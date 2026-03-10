@@ -1,0 +1,1 @@
+this is a store website where you can by clotes shoces ... made by me using next js

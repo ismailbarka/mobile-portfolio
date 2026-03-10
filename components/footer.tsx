@@ -89,12 +89,12 @@ export function Footer() {
 
         {/* Divider & Copyright */}
         <div className="mt-16 pt-8 border-t border-white/5 flex flex-col md:flex-row justify-between items-center gap-4">
-          <p className="text-xs text-foreground/30">
+          <p className="text-xs text-foreground/30 font-medium">
             © {new Date().getFullYear()} Ismail Barka. All rights reserved.
           </p>
-          <div className="flex items-center gap-4 text-xs text-foreground/30">
+          <div className="flex items-center gap-4 text-xs text-foreground/20">
             <span>Designed with intention</span>
-            <span className="h-1 w-1 rounded-full bg-foreground/20" />
+            <span className="h-1 w-1 rounded-full bg-emerald-500/20" />
             <span>Built with Next.js &amp; React</span>
           </div>
         </div>

@@ -31,9 +31,9 @@ const experience = [
 
 export function Experience() {
   return (
-    <section id="experience" className="py-24 sm:py-32">
-      <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8 flex flex-col items-start">
-        <div className="mb-16">
+    <section id="experience" className="py-24 sm:py-32 overflow-hidden">
+      <div className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
+        <div className="mb-16 text-center flex flex-col items-center">
           <div className="mb-4 inline-flex items-center rounded-full bg-white/5 border border-white/5 px-3 py-1 text-xs text-foreground/70 backdrop-blur-md">
             Professional Journey
           </div>
@@ -42,46 +42,51 @@ export function Experience() {
           </h2>
         </div>
 
-        <div className="w-full flex flex-col gap-12 sm:gap-16">
+        <div className="grid gap-6">
           {experience.map((item, index) => (
             <div
               key={index}
-              className="group flex flex-col sm:flex-row gap-4 sm:gap-12 w-full transition-all duration-300 p-6 -mx-6 rounded-3xl hover:bg-white/[0.02] hover:shadow-[inset_0_1px_0_0_rgba(255,255,255,0.05)] border border-transparent hover:border-white/5"
+              className="group relative rounded-[2rem] border border-white/5 bg-white/[0.02] backdrop-blur-sm p-8 sm:p-10 overflow-hidden transition-all duration-300 hover:border-white/10 hover:bg-white/[0.04] hover:-translate-y-1 hover:shadow-[0_8px_30px_rgb(0,0,0,0.12)]"
             >
-              {/* Period - Left Column */}
-              <div className="sm:w-1/4 shrink-0 pt-1">
-                <p className="text-sm font-medium text-foreground/40 group-hover:text-foreground/70 transition-colors">
-                  {item.period}
-                </p>
-                <p className="text-xs text-foreground/30 mt-1">
-                  {item.location}
-                </p>
+              <div className="relative z-10 flex flex-col md:flex-row gap-8 md:gap-12">
+                {/* Period & Location */}
+                <div className="md:w-1/4 shrink-0">
+                  <p className="text-sm font-bold text-emerald-400 mb-1">
+                    {item.period}
+                  </p>
+                  <p className="text-xs text-foreground/40 font-medium">
+                    {item.location}
+                  </p>
+                </div>
+
+                {/* Details */}
+                <div className="md:w-3/4 flex flex-col">
+                  <h3 className="text-xl font-bold text-foreground mb-1 tracking-tight group-hover:text-white transition-colors">
+                    {item.role}
+                  </h3>
+                  <p className="text-base text-foreground/70 font-medium mb-6">
+                    {item.company}
+                  </p>
+                  <p className="text-base text-foreground/50 leading-relaxed max-w-3xl mb-8">
+                    {item.description}
+                  </p>
+
+                  <ul className="space-y-4">
+                    {item.achievements.map((achievement, idx) => (
+                      <li
+                        key={idx}
+                        className="flex gap-4 text-sm text-foreground/50 group-hover:text-foreground/60 transition-colors"
+                      >
+                        <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-white/10 group-hover:bg-emerald-500/50 transition-all" />
+                        <span className="leading-relaxed">{achievement}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
               </div>
 
-              {/* Details - Right Column */}
-              <div className="sm:w-3/4 flex flex-col">
-                <h3 className="text-xl font-semibold text-foreground group-hover:text-purple-400 transition-colors">
-                  {item.role}
-                </h3>
-                <p className="mt-1 text-base text-foreground/60 font-medium">
-                  {item.company}
-                </p>
-                <p className="mt-4 text-base text-foreground/50 leading-relaxed max-w-2xl">
-                  {item.description}
-                </p>
-
-                <ul className="mt-6 space-y-3">
-                  {item.achievements.map((achievement, idx) => (
-                    <li
-                      key={idx}
-                      className="flex gap-3 text-sm text-foreground/50 group-hover:text-foreground/60 transition-colors"
-                    >
-                      <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-white/20 group-hover:bg-purple-500/50 transition-colors" />
-                      <span className="leading-relaxed">{achievement}</span>
-                    </li>
-                  ))}
-                </ul>
-              </div>
+              {/* Decorative background glow */}
+              <div className="absolute inset-x-0 bottom-0 h-full w-full bg-gradient-to-t from-white/[0.01] to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none" />
             </div>
           ))}
         </div>

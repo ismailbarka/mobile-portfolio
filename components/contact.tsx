@@ -6,18 +6,18 @@ import { ContactFormModal } from "@/components/contact-form-modal";
 
 export function Contact() {
   return (
-    <section id="contact" className="py-24 sm:py-32 relative">
+    <section id="contact" className="py-24 sm:py-32 relative overflow-hidden">
       <div className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
-        <div className="relative overflow-hidden rounded-[2.5rem] bg-gradient-to-br from-white/[0.04] to-transparent bg-white/[0.02] backdrop-blur-xl border border-white/5 p-10 sm:p-20 text-center flex flex-col items-center shadow-2xl">
+        <div className="relative overflow-hidden rounded-[3rem] bg-gradient-to-br from-white/[0.04] to-transparent bg-white/[0.02] backdrop-blur-xl border border-white/5 p-10 sm:p-20 text-center flex flex-col items-center shadow-2xl">
           {/* Decorative background glow */}
-          <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full max-w-lg h-64 bg-white/5 rounded-full blur-[120px] pointer-events-none" />
+          <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full max-w-lg h-64 bg-emerald-500/10 rounded-full blur-[120px] pointer-events-none" />
 
-          <div className="relative z-10">
-            <h2 className="text-4xl sm:text-6xl font-extrabold tracking-tighter text-foreground mb-6">
+          <div className="relative z-10 w-full">
+            <h2 className="text-4xl sm:text-6xl font-bold tracking-tighter text-foreground mb-6">
               Let&apos;s build something <br className="hidden sm:block" />
-              <span className="text-foreground/40">great together.</span>
+              <span className="text-emerald-500/60">great together.</span>
             </h2>
-            <p className="max-w-xl mx-auto text-lg text-foreground/50 mb-10">
+            <p className="max-w-xl mx-auto text-lg text-foreground/50 mb-12 font-light leading-relaxed">
               I&apos;m currently open for new opportunities. Whether you have a
               mobile app idea or need a React Native developer, I&apos;d love to
               hear from you.

@@ -41,11 +41,11 @@ export function Skills() {
   return (
     <section
       id="skills"
-      className="py-24 sm:py-32 border-t border-white/5 relative"
+      className="py-24 sm:py-32 border-t border-white/5 relative overflow-hidden"
     >
       <div className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
         <div className="mb-16 text-center flex flex-col items-center">
-          <div className="mb-4 inline-flex items-center rounded-full bg-white/5 border border-white/5 px-3 py-1 text-xs text-foreground/70 backdrop-blur-md">
+          <div className="mb-4 inline-flex items-center rounded-full bg-white/5 border border-white/5 px-3 py-1 text-xs text-foreground/70 backdrop-blur-md text-emerald-400">
             Technical Arsenal
           </div>
           <h2 className="text-3xl font-bold tracking-tight text-foreground sm:text-4xl">

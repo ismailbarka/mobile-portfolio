@@ -36,16 +36,16 @@ export function Navigation() {
       >
         <Link
           href="/"
-          className={`flex items-center gap-2 font-semibold transition-colors ${scrolled ? "text-foreground" : "text-foreground hover:text-white"}`}
+          className={`flex items-center gap-2.5 group transition-colors ${scrolled ? "text-foreground" : "text-foreground hover:text-white"}`}
         >
           <Image
             src="/logo.png"
             alt="Ismail Barka Logo"
             width={24}
             height={24}
-            className="h-6 w-6 rounded-md object-contain"
+            className="h-6 w-6 rounded object-contain transition-transform group-hover:scale-105"
           />
-          <span>Ismail Barka</span>
+          <span className="font-bold tracking-tight">Ismail Barka</span>
         </Link>
         <div
           className={`h-4 w-px mx-2 ${scrolled ? "bg-white/10" : "bg-white/10"}`}

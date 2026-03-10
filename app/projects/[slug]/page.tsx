@@ -1,7 +1,7 @@
 import { notFound } from "next/navigation";
 import Image from "next/image";
 import Link from "next/link";
-import { ArrowLeft } from "lucide-react";
+import { ArrowLeft, ExternalLink } from "lucide-react";
 import { projects } from "@/lib/data/projects";
 
 // In Next.js 15+, params is a promise
@@ -17,11 +17,15 @@ export default async function ProjectPage({
     notFound();
   }
 
+  const isMobile =
+    project.category.toLowerCase().includes("mobile") ||
+    project.category.toLowerCase().includes("native");
+
   return (
     <main className="min-h-screen bg-black dark:bg-[#050505] text-white">
       {/* Navigation Bar */}
       <nav className="sticky top-0 z-50 w-full border-b border-white/5 bg-black/50 backdrop-blur-xl">
-        <div className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8 h-16 flex items-center">
+        <div className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
           <Link
             href="/#featured"
             className="inline-flex items-center text-sm font-medium text-white/70 hover:text-white transition-colors"
@@ -98,18 +102,29 @@ export default async function ProjectPage({
             </h2>
           </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div
+            className={`grid grid-cols-1 gap-8 ${isMobile ? "sm:grid-cols-2 lg:grid-cols-3" : "lg:grid-cols-1"}`}
+          >
             {project.images.map((img, idx) => (
               <div
                 key={idx}
-                className="group relative aspect-[9/19] bg-transparent overflow-hidden transition-all duration-500 hover:scale-[1.02] hover:shadow-2xl hover:shadow-white/5 rounded-[2rem]"
+                className={`group relative overflow-hidden transition-all duration-500 hover:scale-[1.01] hover:shadow-2xl hover:shadow-white/5 rounded-[2rem] border border-white/5 bg-white/[0.02] ${
+                  isMobile ? "aspect-[9/19]" : "aspect-video"
+                }`}
               >
                 <Image
                   src={img}
                   alt={`${project.title} screenshot ${idx + 1}`}
                   fill
-                  className="object-contain transition-transform duration-700 group-hover:scale-105"
-                  sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                  className={`transition-transform duration-700 group-hover:scale-[1.03] ${
+                    isMobile ? "object-contain p-4" : "object-cover"
+                  }`}
+                  priority={idx === 0}
+                  sizes={
+                    isMobile
+                      ? "(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                      : "100vw"
+                  }
                 />
               </div>
             ))}
@@ -117,7 +132,6 @@ export default async function ProjectPage({
         </section>
       </article>
 
-      {/* Small footer */}
       <footer className="border-t border-white/5 py-12 text-center">
         <p className="text-white/40 text-sm">
           &copy; {new Date().getFullYear()} Ismail Barka. All rights reserved.
